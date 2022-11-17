@@ -36,6 +36,7 @@ const routes: Routes = [
   { path: 'paie', loadChildren: () => import('./paie/paie.module').then(m => m.PaieModule) },
 
 
+  { path: 'bsoin', loadChildren: () => import('./bsoin/Bsoin.module').then(m => m.BsoinModule) },
 
 ];
 

@@ -805,5 +805,20 @@ export const MENU: MenuItem[] = [
     //         },
     //     ]
     // }
+
+    {
+            id: 125,
+            label: 'Bulletin de soin',
+            icon: 'bx-share-alt',
+            subItems: [
+                {
+                    id: 126,
+                    label: 'Consultation bulletin de soin',
+                    link: '/bsoin/bsoin',
+                    parentId: 125
+                },
+              
+            ]
+        }
 ];
 
