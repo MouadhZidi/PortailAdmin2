@@ -172,7 +172,7 @@ export class DemandePretAvanceComponent implements OnInit {
       headerName: "Code groupe prêt",
       field: "group_pret",
       editable: true,
-      oatingFilter: true,
+      floatingFilter: true,
       filter: true,
     },
 

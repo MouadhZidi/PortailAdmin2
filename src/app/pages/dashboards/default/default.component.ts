@@ -5,6 +5,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EventService } from '../../../core/services/event.service';
 
 import { ConfigService } from '../../../core/services/config.service';
+import { PersonnelService } from '../../Employe/personnel.service';
+import { TokenStorage } from 'src/app/core/services/token-storage.service';
 
 @Component({
   selector: 'app-default',
@@ -12,7 +14,9 @@ import { ConfigService } from '../../../core/services/config.service';
   styleUrls: ['./default.component.scss']
 })
 export class DefaultComponent implements OnInit {
-
+  pers:any = {
+    cod_soc:this.token.getUser().cod_soc,
+    mat_pers:this.token.getUser().matpers}
   isVisible: string;
 
   emailSentBarChart: ChartType;
@@ -23,10 +27,12 @@ export class DefaultComponent implements OnInit {
   isActive: string;
 
   @ViewChild('content') content;
-  constructor(private modalService: NgbModal, private configService: ConfigService, private eventService: EventService) {
+  constructor(private modalService: NgbModal, private configService: ConfigService, private eventService: EventService,
+    private serv:PersonnelService,private token:TokenStorage) {
   }
 
   ngOnInit() {
+    this.getpers()
 
     /**
      * horizontal-vertical layput set
@@ -75,6 +81,17 @@ export class DefaultComponent implements OnInit {
   openModal() {
     this.modalService.open(this.content, { centered: true });
   }
+  getpers(){
+
+    this.serv.getpersonnel(this.pers).subscribe(
+      data => {
+        this.pers = data; console.log('exected' + data);
+       
+      },
+      err => {
+        console.log(err);
+      }
+      );}
 
   weeklyreport() {
     this.isActive = 'week';

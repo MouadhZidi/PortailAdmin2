@@ -21,7 +21,7 @@ import Swal from 'sweetalert2';
  * Login component
  */
 export class LoginComponent implements OnInit {
-
+  errr:string
   form: any = {
     matpers: null,
     usepswd: null,
@@ -55,7 +55,12 @@ export class LoginComponent implements OnInit {
         this.route.navigate(["/dashboard"])
         this.isLoginFailed = false;
         this.isLoggedIn = true;
-/* if (data){       
+        if(data){
+        }
+        else{
+
+        }
+if (data){       
    Swal.fire({
   position: 'top-end',
   icon: 'success',
@@ -63,7 +68,7 @@ export class LoginComponent implements OnInit {
   showConfirmButton: false,
   timer: 3000
 });
-} */
+} 
 
 
 
@@ -75,13 +80,7 @@ export class LoginComponent implements OnInit {
         });*/
       },
       (err) => {
-        /* this.errorMessage = err.error.message;
-        this.isLoginFailed = true; */
-       /* this.toast.error({
-          detail: ' Error Message',
-          summary: 'Login Failed, try again !',
-          duration: 5000,
-        });*/
+       this.errr="veuillez vérifier votre matricule ou mot de passe"
       }
     );
   }

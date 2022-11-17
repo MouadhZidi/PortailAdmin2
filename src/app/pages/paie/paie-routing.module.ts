@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { GuardauthService } from 'src/app/guard/guardauth.service';
 import { DeclarationComponent } from './declaration/declaration.component';
 import { EtatApresPaieComponent } from './etat-apres-paie/etat-apres-paie.component';
 
@@ -8,11 +9,11 @@ import { EtatApresPaieComponent } from './etat-apres-paie/etat-apres-paie.compon
 const routes: Routes = [
     {
         path: 'bulletin-paie',
-        component: EtatApresPaieComponent
+        component: EtatApresPaieComponent,canActivate:[GuardauthService]
     },
     {
         path: 'declaration',
-        component: DeclarationComponent
+        component: DeclarationComponent,canActivate:[GuardauthService]
     }
 ];
 

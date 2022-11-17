@@ -5,6 +5,7 @@ import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-mod
 import { PaieService } from "../paie.service";
 import { Module } from "@ag-grid-community/core";
 import { TokenStorage } from "src/app/core/services/token-storage.service";
+import { ComptepersService } from "../../Employe/comptepers.service";
 
 @Component({
   selector: 'app-etat-apres-paie',
@@ -12,7 +13,7 @@ import { TokenStorage } from "src/app/core/services/token-storage.service";
   styleUrls: ['./etat-apres-paie.component.scss']
 })
 export class EtatApresPaieComponent implements OnInit {
-
+list:any=[]
   listInfo: any;
   ListTypeBull!: any[];
 
@@ -47,11 +48,14 @@ export class EtatApresPaieComponent implements OnInit {
 
   constructor(
     private serv: PaieService,
+    private serv2: ComptepersService,
+
     private tokenService: TokenStorage,
     private formBuilder: FormBuilder
   ) {}
 
   ngOnInit(): void {
+    this.GetConge22()
     this.formDocument = this.formBuilder.group({
       dateBul: [""],
       cod_typ_bul: [""],
@@ -166,6 +170,18 @@ export class EtatApresPaieComponent implements OnInit {
       (data: any) => {
         this.listInfo = data;
         this.rowData = this.listInfo.possVH;
+
+        console.log(data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+  GetConge22() {
+    this.serv2.getall().subscribe(
+      (data: any[]) => {
+        this.list = data;
 
         console.log(data);
       },

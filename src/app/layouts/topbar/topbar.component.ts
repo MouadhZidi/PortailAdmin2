@@ -8,6 +8,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { LanguageService } from '../../core/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
 import { TokenStorage } from 'src/app/core/services/token-storage.service';
+import { PersonnelService } from 'src/app/pages/Employe/personnel.service';
 
 @Component({
   selector: 'app-topbar',
@@ -19,6 +20,9 @@ import { TokenStorage } from 'src/app/core/services/token-storage.service';
  * Topbar component
  */
 export class TopbarComponent implements OnInit {
+ pers:any = {
+    cod_soc:this.token.getUser().cod_soc,
+    mat_pers:this.token.getUser().matpers}
 
   element;
   cookieValue;
@@ -31,7 +35,7 @@ export class TopbarComponent implements OnInit {
               public languageService: LanguageService,
               public translate: TranslateService,
               public _cookiesService: CookieService,
-              private token:TokenStorage) {
+              private token:TokenStorage,private serv:PersonnelService) {
   }
 
   listLang = [
@@ -48,6 +52,7 @@ export class TopbarComponent implements OnInit {
   @Output() mobileMenuButtonClicked = new EventEmitter();
 
   ngOnInit() {
+    this.getpers()
     this.openMobileMenu = false;
     this.element = document.documentElement;
 
@@ -82,6 +87,17 @@ export class TopbarComponent implements OnInit {
     event.preventDefault();
     this.mobileMenuButtonClicked.emit();
   }
+  getpers(){
+
+    this.serv.getpersonnel(this.pers).subscribe(
+      data => {
+        this.pers = data; console.log('exected' + data);
+       
+      },
+      err => {
+        console.log(err);
+      }
+      );}
 
   /**
    * Logout the user

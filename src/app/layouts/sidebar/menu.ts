@@ -75,57 +75,28 @@ export const MENU: MenuItem[] = [
     // },
     {
         id: 12,
-        label: 'MENUITEMS.ECOMMERCE.TEXT',
+        label: 'Employe',
         icon: 'bx-store',
         subItems: [
             {
                 id: 13,
-                label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTS',
-                link: '/ecommerce/products',
+                label: 'Informations personnel',
+                link: '/employe/infopers',
                 parentId: 12
             },
             {
                 id: 14,
-                label: 'MENUITEMS.ECOMMERCE.LIST.PRODUCTDETAIL',
-                link: '/ecommerce/product-detail/1',
+                label: 'Informations professionel',
+                link: '/employe/infoprof',
                 parentId: 12
             },
             {
                 id: 15,
-                label: 'MENUITEMS.ECOMMERCE.LIST.ORDERS',
-                link: '/ecommerce/orders',
+                label: 'Informations sociale',
+                link: '/employe/infosoc',
                 parentId: 12
             },
-            {
-                id: 16,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CUSTOMERS',
-                link: '/ecommerce/customers',
-                parentId: 12
-            },
-            {
-                id: 17,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CART',
-                link: '/ecommerce/cart',
-                parentId: 12
-            },
-            {
-                id: 18,
-                label: 'MENUITEMS.ECOMMERCE.LIST.CHECKOUT',
-                link: '/ecommerce/checkout',
-                parentId: 12
-            },
-            {
-                id: 19,
-                label: 'MENUITEMS.ECOMMERCE.LIST.SHOPS',
-                link: '/ecommerce/shops',
-                parentId: 12
-            },
-            {
-                id: 20,
-                label: 'MENUITEMS.ECOMMERCE.LIST.ADDPRODUCT',
-                link: '/ecommerce/add-product',
-                parentId: 12
-            },
+       
         ]
     },
     {

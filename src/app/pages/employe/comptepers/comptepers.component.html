@@ -1,0 +1,25 @@
+           
+ <select class="form-control" required  [(ngModel)]="x">
+  <option  *ngFor="let c of list" [ngValue]="c.cod_typ_bul">{{c.lib_bull}}</option>
+</select>
+<button
+type="submit"
+class="btn btn-primary w-md"
+(click)="GetConge()"
+>
+<i class="dripicons-search">Chercher</i>
+</button>
+  <br>
+  
+  <ag-grid-angular 
+    style="width: 100%; height: 300px;" 
+    class="ag-theme-alpine"
+    [rowData]="rowData" 
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [pagination]="true"
+    [modules]="modules"
+
+
+    >
+</ag-grid-angular>

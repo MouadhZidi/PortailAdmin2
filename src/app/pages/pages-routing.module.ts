@@ -29,6 +29,7 @@ const routes: Routes = [
   { path: 'maps', loadChildren: () => import('./maps/maps.module').then(m => m.MapsModule) },
 
 
+  { path: 'employe', loadChildren: () => import('./Employe/Employe.module').then(m => m.EmployeModule) },
 
 
   { path: 'conge', loadChildren: () => import('./conge/conge.module').then(m => m.CongeModule) },

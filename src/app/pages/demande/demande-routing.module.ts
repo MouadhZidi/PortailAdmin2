@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { GuardauthService } from 'src/app/guard/guardauth.service';
 import { DemandeAutorisationComponent } from './demande-autorisation/demande-autorisation.component';
 import { DemandeCongeComponent } from './demande-conge/demande-conge.component';
 import { DemandeDocumentComponent } from './demande-document/demande-document.component';
@@ -12,27 +13,27 @@ import { DemandeSituationComponent } from './demande-situation/demande-situation
 const routes: Routes = [
     {
         path: 'PretAvance',
-        component: DemandePretAvanceComponent
+        component: DemandePretAvanceComponent,canActivate:[GuardauthService]
     },
     {
         path: 'Autorisation',
-        component: DemandeAutorisationComponent
+        component: DemandeAutorisationComponent,canActivate:[GuardauthService]
     },
     {
         path: 'Situation',
-        component: DemandeSituationComponent
+        component: DemandeSituationComponent,canActivate:[GuardauthService]
     },
     {
         path: 'Formation',
-        component: DemandeFormationComponent
+        component: DemandeFormationComponent,canActivate:[GuardauthService]
     },
     {
         path: 'Document',
-        component: DemandeDocumentComponent
+        component: DemandeDocumentComponent,canActivate:[GuardauthService]
     },
     {
         path: 'Conge',
-        component: DemandeCongeComponent
+        component: DemandeCongeComponent,canActivate:[GuardauthService]
     }
 ]
 
