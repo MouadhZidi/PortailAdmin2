@@ -52,7 +52,7 @@ export const MENU: MenuItem[] = [
     },
     {
         id: 9,
-        label: 'MENUITEMS.CALENDAR.TEXT',
+        label: 'Calendrier des congés',
         icon: 'bx-calendar',
         link: '/calendar',
     },
@@ -700,37 +700,37 @@ export const MENU: MenuItem[] = [
     //         }
     //     ]
     // },
-    // {
-    //     id: 113,
-    //     icon: 'bxs-bar-chart-alt-2',
-    //     label: 'MENUITEMS.CHARTS.TEXT',
-    //     subItems: [
-    //         {
-    //             id: 114,
-    //             label: 'MENUITEMS.CHARTS.LIST.APEX',
-    //             link: '/charts/apex',
-    //             parentId: 113
-    //         },
-    //         {
-    //             id: 115,
-    //             label: 'MENUITEMS.CHARTS.LIST.CHARTJS',
-    //             link: '/charts/chartjs',
-    //             parentId: 113
-    //         },
-    //         {
-    //             id: 116,
-    //             label: 'MENUITEMS.CHARTS.LIST.CHARTIST',
-    //             link: '/charts/chartist',
-    //             parentId: 113
-    //         },
-    //         {
-    //             id: 117,
-    //             label: 'MENUITEMS.CHARTS.LIST.ECHART',
-    //             link: '/charts/echart',
-    //             parentId: 113
-    //         }
-    //     ]
-    // },
+    {
+        id: 113,
+        icon: 'bxs-bar-chart-alt-2',
+        label: 'Graphiques',
+        subItems: [
+            {
+                id: 114,
+                label: 'Masse salariale',
+                link: '/charts/apex',
+                parentId: 113
+            },
+            // {
+            //     id: 115,
+            //     label: 'MENUITEMS.CHARTS.LIST.CHARTJS',
+            //     link: '/charts/chartjs',
+            //     parentId: 113
+            // },
+            {
+                id: 116,
+                label: 'Libellé absentéisme',
+                link: '/charts/chartist',
+                parentId: 113
+            },
+            {
+                id: 117,
+                label: 'Gestion effectif EFFECTIF',
+                link: '/charts/echart',
+                parentId: 113
+            }
+        ]
+    },
     // {
     //     id: 118,
     //     label: 'MENUITEMS.ICONS.TEXT',

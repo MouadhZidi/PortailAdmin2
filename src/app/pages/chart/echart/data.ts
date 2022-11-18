@@ -62,7 +62,7 @@ const barChart: ChartType = {
     xAxis: [
         {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            data: ['40-50', '30-40', '50-60', '<30', '>60'],
             axisTick: {
                 show: false
             },
@@ -87,25 +87,25 @@ const barChart: ChartType = {
         }
     }],
     series: [{
-        name: 'Counters',
+        name: 'X 1000 persons',
         type: 'bar',
         barWidth: '60%',
-        data: [10, 52, 200, 334, 390, 330, 220]
+        data: [11.2, 10.2, 9.5, 3.8, 0.8]
     }]
 };
 
 const pieChart: ChartType = {
     series: [{
         data: [
-            { value: 45, name: 'Crome' },
-            { value: 20, name: 'IE' }, { value: 17, name: 'Firefox' }, { value: 5, name: 'Safari' }, { value: 10, name: 'Etc' }],
+            { value: 55.37, name: 'Masulin 55.37%' },
+             { value: 44.63, name: 'Féminin 44.63%' }],
         type: 'pie',
     }],
-    color: ['#556ee6', '#34c38f', '#f1b44c', '#50a5f1', '#f46a6a'],
+    color: ['#556ee6', '#f46a6a'],
     legend: {
         x: 'center',
         y: 'bottom',
-        data: ['Crome', 'IE', 'Firefox', 'Safari', 'Etc'],
+        data: ['Féminin 44.63%','Masulin 55.37%'],
     },
     tooltip: {
         trigger: 'axis'
@@ -381,10 +381,10 @@ const bubbleChart: ChartType = {
     },
 }
 
-const dataAxis = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
-const data1 = [220, 182, 191, 234, 290, 330, 310, 123, 442, 321, 90, 149, 210, 122, 133, 334, 198, 123, 125, 220];
+const dataAxis = ['Classe 1', 'Classe 2', 'Classe 3', 'Classe 4', 'Classe 5'];
+const data1 = [1, 9, 22, 3, 1];
 const dataShadow = [];
-const yMax = 500;
+const yMax = 25;
 
 // tslint:disable-next-line: prefer-for-of
 for (let i = 0; i < data1.length; i++) {

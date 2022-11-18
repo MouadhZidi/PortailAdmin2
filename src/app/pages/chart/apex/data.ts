@@ -100,23 +100,20 @@ const basicColumChart: ChartType = {
         width: 2,
         colors: ['transparent']
     },
-    colors: ['#34c38f', '#556ee6', '#f46a6a'],
+    colors: ['#556ee6', '#f46a6a'],
     series: [{
-        name: 'Net Profit',
-        data: [46, 57, 59, 54, 62, 58, 64, 60, 66]
+        name: 'Masuclin',
+        data: [0.6,3.3,3.1,3.05,2.95,2.85,2.7,2.8,3.1,3.4,2]
     }, {
-        name: 'Revenue',
-        data: [74, 83, 102, 97, 86, 106, 93, 114, 94]
-    }, {
-        name: 'Free Cash Flow',
-        data: [37, 42, 38, 26, 47, 50, 54, 55, 43]
+        name: 'Féminin',
+        data: [0.4,1.8,1.8,1.9,1.95,1.9,1.9,2,2.4,2.5,1.5]
     }],
     xaxis: {
-        categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+        categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020','2021','2022'],
     },
     yaxis: {
         title: {
-            text: '$ (thousands)'
+            text: 'Dinars (milles)'
         }
     },
     fill: {
@@ -128,7 +125,7 @@ const basicColumChart: ChartType = {
     tooltip: {
         y: {
             formatter: (val) => {
-                return '$ ' + val + ' thousands';
+                return 'Dinars ' + val + ' milles';
             }
         }
     }
@@ -238,10 +235,10 @@ const columnlabelChart: ChartType = {
     },
     series: [{
         name: 'Inflation',
-        data: [2.5, 3.2, 5.0, 10.1, 4.2, 3.8, 3, 2.4, 4.0, 1.2, 3.5, 0.8]
+        data: [4.01,3.95,3.97,3.85,3.97,4.01,4.35,3.97,3.85,3.75,3.75,7.85]
     }],
     xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        categories: ['Jan', 'Fév', 'Mas', 'Avr', 'Mai', 'Jui', 'Juil', 'Aout', 'Sep', 'Oct', 'Nov', 'Dec'],
         position: 'top',
         labels: {
             offsetY: -18,
@@ -296,7 +293,7 @@ const columnlabelChart: ChartType = {
         }
     },
     title: {
-        text: 'Monthly Inflation in Argentina, 2002',
+        text: 'De janvier à Décembre',
         floating: true,
         offsetY: 320,
         align: 'center',
@@ -323,12 +320,12 @@ const barChart: ChartType = {
         enabled: false
     },
     series: [{
-        data: [380, 430, 450, 475, 550, 584, 780, 1100, 1220, 1365]
+        data: [9.4,7.6,7.4,7.1,4.1,4,3.4,2.5,1.7]
     }],
     colors: ['#34c38f'],
     xaxis: {
         // tslint:disable-next-line: max-line-length
-        categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'],
+        categories: ['Section 05', 'Section 02','Section 09','Section 07','Section 06','Section 10','Section 03','Section 04','Section 08'],
     },
     grid: {
         borderColor: '#f1f1f1'
@@ -456,16 +453,13 @@ const splineAreaChart: ChartType = {
     },
     series: [{
         name: 'series1',
-        data: [34, 40, 28, 52, 42, 109, 100]
-    }, {
-        name: 'series2',
-        data: [32, 60, 34, 46, 34, 52, 41]
-    }],
-    colors: ['#556ee6', '#34c38f'],
+        data: [1, 5, 4.9, 4.8, 5.3, 3.8]
+    }, ],
+    colors: ['#556ee6'],
     xaxis: {
         type: 'datetime',
         // tslint:disable-next-line: max-line-length
-        categories: ['2018-09-19T00:00:00', '2018-09-19T01:30:00', '2018-09-19T02:30:00', '2018-09-19T03:30:00', '2018-09-19T04:30:00', '2018-09-19T05:30:00', '2018-09-19T06:30:00'],
+        categories: ['2012', '2014', '2016', '2018', '2020', '2022'],
     },
     grid: {
         borderColor: '#f1f1f1',

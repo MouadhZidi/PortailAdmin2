@@ -49,6 +49,8 @@ with:200,
     },
     { headerName: "Date de Naissance",
       field: "libdat_naiss",
+      floatingFilter: true,
+
       filter: "agDateColumnFilter",
       with:200,
 
@@ -85,6 +87,8 @@ with:200,
 
       field: "date_ind_fin",
       filter: "agDateColumnFilter",
+      floatingFilter: true,
+
       filterParams: {
         // provide comparator function
         comparator: function (filterLocalDateAtMidnight: any, cellValue: any) {

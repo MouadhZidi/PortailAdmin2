@@ -15,22 +15,25 @@ import { DefaultComponent } from './default/default.component';
 import { SaasComponent } from './saas/saas.component';
 import { CryptoComponent } from './crypto/crypto.component';
 import { BlogComponent } from './blog/blog.component';
+import { ChartModule } from "../chart/chart.module";
+
 
 @NgModule({
-  declarations: [DefaultComponent, SaasComponent, CryptoComponent, BlogComponent],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    DashboardsRoutingModule,
-    UIModule,
-    NgbDropdownModule,
-    NgbTooltipModule,
-    NgbNavModule,
-    WidgetModule,
-    NgApexchartsModule,
-    SharedModule,
-    SimplebarAngularModule
-  ]
+    declarations: [DefaultComponent, SaasComponent, CryptoComponent, BlogComponent],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        DashboardsRoutingModule,
+        UIModule,
+        NgbDropdownModule,
+        NgbTooltipModule,
+        NgbNavModule,
+        WidgetModule,
+        NgApexchartsModule,
+        SharedModule,
+        SimplebarAngularModule,
+        ChartModule
+    ]
 })
 export class DashboardsModule { }

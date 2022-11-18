@@ -24,18 +24,12 @@ const emailSentBarChart: ChartType = {
     },
     series: [{
         name: 'Series A',
-        data: [44, 55, 41, 67, 22, 43, 36, 52, 24, 18, 36, 48]
-    }, {
-        name: 'Series B',
-        data: [13, 23, 20, 8, 13, 27, 18, 22, 10, 16, 24, 22]
-    }, {
-        name: 'Series C',
-        data: [11, 17, 15, 15, 21, 14, 11, 18, 17, 12, 20, 18]
-    }],
+        data: [25,25,1,163,1,134,112,50,52,51,-135,-270,29]
+    } ],
     xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        categories: ['2021','2020','2019','2018','2017','2016','2015','2014','2013','2012','2011','2010','2009'],
     },
-    colors: ['#556ee6', '#f1b44c', '#34c38f'],
+    colors: ['#556ee6'],
     legend: {
         position: 'bottom',
     },

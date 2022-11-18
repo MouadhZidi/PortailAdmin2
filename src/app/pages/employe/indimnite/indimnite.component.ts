@@ -57,6 +57,8 @@ export class IndimniteComponent implements OnInit {
     { headerName: "Date Indemnité",
       field: "date_ind",
       filter: "agDateColumnFilter",
+      floatingFilter: true,
+
       filterParams: {
         // provide comparator function
         comparator: function (filterLocalDateAtMidnight: any, cellValue: any) {
@@ -87,6 +89,8 @@ export class IndimniteComponent implements OnInit {
       cellEditor: "primeCellEditor",
     }, {
       headerName: "date fin indeminité",
+      floatingFilter: true,
+
 
       field: "date_ind_fin",
       filter: "agDateColumnFilter",

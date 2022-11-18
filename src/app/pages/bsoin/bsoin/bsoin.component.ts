@@ -31,9 +31,8 @@ export class BsoinComponent implements OnInit {
   
   constructor(private serv : LigbsoinService,private token:TokenStorage) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   
-    console.log("1111"+this.idbesoin.cod_soc);
     this.getgouv();
     this.getgouv1();
     

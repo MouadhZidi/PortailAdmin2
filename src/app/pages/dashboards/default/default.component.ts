@@ -14,6 +14,19 @@ import { TokenStorage } from 'src/app/core/services/token-storage.service';
   styleUrls: ['./default.component.scss']
 })
 export class DefaultComponent implements OnInit {
+
+  breadCrumbItems: Array<{}>;
+
+  linewithDataChart: ChartType;
+  basicColumChart: ChartType;
+  columnlabelChart: ChartType;
+  lineColumAreaChart: ChartType;
+  basicRadialBarChart: ChartType;
+  simplePieChart: ChartType;
+  donutChart: ChartType;
+  barChart: ChartType;
+  splineAreaChart: ChartType;
+  dashedLineChart: ChartType;
   pers:any = {
     cod_soc:this.token.getUser().cod_soc,
     mat_pers:this.token.getUser().matpers}

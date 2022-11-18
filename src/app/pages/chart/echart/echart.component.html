@@ -1,27 +1,36 @@
 <div class="container-fluid">
-  <app-page-title title="E - chart" [breadcrumbItems]="breadCrumbItems"></app-page-title>
-
+  <app-page-title title="Tableau de bord - Gestion effectif "></app-page-title>
+  <app-page-title title="Taux de tournover : 5.595 "></app-page-title>
+  <app-page-title title="Taux d'embauche : 5.894 "></app-page-title>
   <div class="row">
-    <div class="col-lg-6">
+    <!-- <div class="col-lg-6">
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">Line chart</h4>
           <div echarts [options]="lineChart" class="demo-chart"></div>
         </div>
       </div>
+    </div> -->
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Effectif par sexe</h4>
+          <div echarts [options]="pieChart" class="demo-chart"></div>
+        </div>
+      </div>
     </div>
 
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Bar chart</h4>
+          <h4 class="card-title">Effectif par tranche d'age</h4>
           <div echarts [options]="barChart" class="demo-chart"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body">
@@ -37,10 +46,10 @@
           <div echarts [options]="customPieChart" class="demo-chart"></div>
         </div>
       </div>
-    </div>
-  </div>
+    </div> 
+  </div> -->
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body">
@@ -57,9 +66,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body">
@@ -76,12 +85,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="row">
     <div class="col-lg-12">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Gradient Bar chart (zoom)</h4>
+          <h4 class="card-title">Effectif par classification</h4>
           <div echarts [options]="gradientBarChart" class="demo-chart"></div>
         </div>
       </div>

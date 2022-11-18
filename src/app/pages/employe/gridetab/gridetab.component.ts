@@ -32,28 +32,19 @@ export class GridetabComponent implements OnInit {
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 250,
+      width: 350,
     },
     {
-      headerName: "Emplois",
+      headerName: "fonction",
       field: "emploi",
       editable: true,
       resizable: true,
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 250,
+      width: 350,
       },
-    {
-      headerName: "fonction",
-      field: "fonct_corr",
-      editable: true,
-      resizable: true,
-      sortable: true,
-      filter: true,
-      floatingFilter: true,
-      width: 250,
-    },
+   
     {
       field: "dat_emb",
       filter: "agDateColumnFilter",
@@ -87,7 +78,7 @@ export class GridetabComponent implements OnInit {
       },
       editable: true,
       cellEditor: "primeCellEditor",   
-         width: 250,
+        
 
     }
 

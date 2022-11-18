@@ -44,8 +44,18 @@ export class ExprienceprofComponent implements OnInit {
       floatingFilter: true,
       width: 200,
       },
+      {
+        headerName: "fonction ",
+        field: "emploi",
+        editable: true,
+        resizable: true,
+        sortable: true,
+        filter: true,
+        floatingFilter: true,
+        width: 150,
+      },
     {
-      headerName: "fonction",
+      headerName: "fonction equivalant",
       field: "fonct_corr",
       editable: true,
       resizable: true,
@@ -58,6 +68,8 @@ export class ExprienceprofComponent implements OnInit {
       field: "dat_emb",
       filter: "agDateColumnFilter",
       width:140,
+      floatingFilter: true,
+
       filterParams: {
         // provide comparator function
         comparator: function (filterLocalDateAtMidnight: any, cellValue: any) {
@@ -92,6 +104,8 @@ export class ExprienceprofComponent implements OnInit {
       field: "dat_fin",
       filter: "agDateColumnFilter",
       width:150,
+      floatingFilter: true,
+
       filterParams: {
         // provide comparator function
         comparator: function (filterLocalDateAtMidnight: any, cellValue: any) {

@@ -3,9 +3,10 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { CalendarOptions, EventClickArg, EventApi } from '@fullcalendar/angular';
-import { category, calendarEvents, createEventId } from './data';
 
 import Swal from 'sweetalert2';
+import { CalendarService } from './calendar.service';
+import { TokenStorage } from 'src/app/core/services/token-storage.service';
 
 @Component({
   selector: 'app-calendar',
@@ -28,30 +29,14 @@ export class CalendarComponent implements OnInit {
   calendarEvents: any[];
   // event form
   formData: FormGroup;
+  rowData:any[]=[]
+  events:any[]=[]
+  eventss:any=[{
+    title:"lunch",start:"2022-10-22"
+  }]
 
   calendarOptions: CalendarOptions = {
-    headerToolbar: {
-      left: 'dayGridMonth,dayGridWeek,dayGridDay',
-      center: 'title',
-      right: 'prevYear,prev,next,nextYear'
-    },
-    initialView: "dayGridMonth",
-    themeSystem: "bootstrap",
-    initialEvents: calendarEvents,
-    weekends: true,
-    editable: true,
-    selectable: true,
-    selectMirror: true,
-    dayMaxEvents: true,
-    dateClick: this.openModal.bind(this),
-    eventClick: this.handleEventClick.bind(this),
-    eventsSet: this.handleEvents.bind(this),
-    eventTimeFormat: { // like '14:30:00'
-      hour: '2-digit',
-      minute: '2-digit',
-      meridiem: false,
-      hour12: true
-    }
+   
   };
   currentEvents: EventApi[] = [];
 
@@ -68,6 +53,7 @@ export class CalendarComponent implements OnInit {
       editCategory: [],
     });
     this._fetchData();
+    this.getListSituation()
   }
 
   /**
@@ -92,8 +78,12 @@ export class CalendarComponent implements OnInit {
 
   constructor(
     private modalService: NgbModal,
-    private formBuilder: FormBuilder
-  ) {}
+    private formBuilder: FormBuilder,
+    private serv :CalendarService,
+    private tokenService:TokenStorage
+  ) {
+
+  }
 
   get form() {
     return this.formData.controls;
@@ -185,39 +175,83 @@ export class CalendarComponent implements OnInit {
     this.modalService.dismissAll();
   }
 
+  getListSituation() {
+    this.serv.GetChambreByCode(this.tokenService.getUser().cod_soc,
+    this.tokenService.getUser().matpers).subscribe(
+      (data: any[]) => {
+        this.rowData = data;
+        this.events=data.map((e:any)=>({title:e.lib_mot,start:e.dateC,color:"orange"}))
+
+
+        this.calendarOptions = {
+          headerToolbar: {
+            left: 'dayGridMonth,dayGridWeek,dayGridDay',
+            center: 'title',
+            right: 'prevYear,prev,next,nextYear'
+          },
+          initialView: "dayGridMonth",
+          themeSystem: "bootstrap",
+          eventSources: this.events,
+          events: this.events,
+          weekends: true,
+          editable: true,
+          selectable: true,
+          selectMirror: true,
+          dayMaxEvents: true,
+          dateClick: this.openModal.bind(this),
+          eventClick: this.handleEventClick.bind(this),
+          eventsSet: this.handleEvents.bind(this),
+          eventTimeFormat: { // like '14:30:00'
+            hour: '2-digit',
+            minute: '2-digit',
+            meridiem: false,
+            hour12: true
+          }
+      
+        };
+
+
+        
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
   /**
    * Save the event
    */
-  saveEvent() {
-    if (this.formData.valid) {
-      const title = this.formData.get('title').value;
-      const className = this.formData.get('category').value;
-      const calendarApi = this.newEventDate.view.calendar;
-      calendarApi.addEvent({
-        id: createEventId(),
-        title,
-        start: this.newEventDate.date,
-        end: this.newEventDate.date,
-        className: className + ' ' + 'text-white'
-      });
-      this.position();
-      this.formData = this.formBuilder.group({
-        title: '',
-        category: '',
-      });
-      this.modalService.dismissAll();
-    }
-    this.submitted = true;
-  }
+  // saveEvent() {
+  //   if (this.formData.valid) {
+  //     const title = this.formData.get('title').value;
+  //     const className = this.formData.get('category').value;
+  //     const calendarApi = this.newEventDate.view.calendar;
+  //     calendarApi.addEvent({
+  //       id: createEventId(),
+  //       title,
+  //       start: this.newEventDate.date,
+  //       end: this.newEventDate.date,
+  //       className: className + ' ' + 'text-white'
+  //     });
+  //     this.position();
+  //     this.formData = this.formBuilder.group({
+  //       title: '',
+  //       category: '',
+  //     });
+  //     this.modalService.dismissAll();
+  //   }
+  //   this.submitted = true;
+  // }
 
   /**
    * Fetches the data
    */
   private _fetchData() {
     // Event category
-    this.category = category;
+    //this.category = category;
     // Calender Event Data
-    this.calendarEvents = calendarEvents;
+   // this.calendarEvents = calendarEvents;
     // form submit
     this.submitted = false;
   }

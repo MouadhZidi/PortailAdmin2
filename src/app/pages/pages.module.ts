@@ -34,6 +34,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { MapsModule } from './maps/maps.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ChatComponent } from './chat/chat.component';
+import { ApexComponent } from './chart/apex/apex.component';
  
 
 
@@ -44,7 +45,7 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
 ]);
 
 @NgModule({
-  declarations: [CalendarComponent, ChatComponent ],
+  declarations: [CalendarComponent, ChatComponent],
   imports: [
     CommonModule,
     FormsModule,

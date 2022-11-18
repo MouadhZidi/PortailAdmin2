@@ -3,9 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ChartType } from './chartist.model';
 
 import {
-  // tslint:disable-next-line: max-line-length
-  simpleLineChart, lineScatter, areaLineChart, overlappingBarChart, stackBarChart, horizontalBarChart,
-  donutAnimateChart, simplePieChart
+  linewithDataChart, basicColumChart, columnlabelChart, lineColumAreaChart,
+  basicRadialBarChart, simplePieChart, donutChart, barChart, splineAreaChart, dashedLineChart,pieChart
 } from './data';
 
 @Component({
@@ -19,57 +18,49 @@ import {
  */
 export class ChartistComponent implements OnInit {
 
-  constructor() { }
+ // bread crumb items
+ breadCrumbItems: Array<{}>;
 
-  // bread crumb items
-  breadCrumbItems: Array<{}>;
+ linewithDataChart: ChartType;
+ basicColumChart: ChartType;
+ columnlabelChart: ChartType;
+ lineColumAreaChart: ChartType;
+ basicRadialBarChart: ChartType;
+ simplePieChart: ChartType;
+ donutChart: ChartType;
+ barChart: ChartType;
+ splineAreaChart: ChartType;
+ dashedLineChart: ChartType;
 
-  // Simple line chart
-  simpleLineChart: ChartType;
-  // Line Scatter Diagram
-  lineScatter: ChartType;
-  // Line chart with area
-  areaLineChart: ChartType;
-  // Overlapping bars on mobile
-  overlappingBarChart: ChartType;
-  // Stacked bar chart
-  stackBarChart: ChartType;
-  // Horizontal bar chart
-  horizontalBarChart: ChartType;
-  // Animating a Donut with Svg.animate
-  donutAnimateChart: ChartType;
-  // simple pie chart
-  simplePieChart: ChartType;
+ pieChart: ChartType;
 
-  ngOnInit() {
-    this.breadCrumbItems = [{ label: 'Charts' }, { label: 'Chartist chart', active: true }];
+ constructor() { }
 
-    /**
-     * fetches data
-     */
-    this._fetchData();
-  }
+ ngOnInit() {
+   this.breadCrumbItems = [{ label: 'Charts' }, { label: 'Apex charts', active: true }];
 
-  /**
-   * fetches the chart data
-   */
-  private _fetchData() {
+   /**
+    * Fethches the chart data
+    */
+   this._fetchData();
+ }
 
-    // Simple line chart data
-    this.simpleLineChart = simpleLineChart;
-    // Line Scatter Diagram data
-    this.lineScatter = lineScatter;
-    // Line chart with area chart data
-    this.areaLineChart = areaLineChart;
-    // Overlapping bars on mobile
-    this.overlappingBarChart = overlappingBarChart;
-    // Stacked bar chart data
-    this.stackBarChart = stackBarChart;
-    // Horizontal bar chart
-    this.horizontalBarChart = horizontalBarChart;
-    // Animating a Donut chart data
-    this.donutAnimateChart = donutAnimateChart;
-    // simple pie chart data
-    this.simplePieChart = simplePieChart;
-  }
+ /**
+  * Fetches the chart data
+  */
+ private _fetchData() {
+   this.linewithDataChart = linewithDataChart;
+   this.basicColumChart = basicColumChart;
+   this.columnlabelChart = columnlabelChart;
+   this.lineColumAreaChart = lineColumAreaChart;
+   this.basicRadialBarChart = basicRadialBarChart;
+   this.simplePieChart = simplePieChart;
+   this.donutChart = donutChart;
+   this.barChart = barChart;
+   this.splineAreaChart = splineAreaChart;
+   this.dashedLineChart = dashedLineChart;
+
+   this.pieChart = pieChart;
+   
+ }
 }

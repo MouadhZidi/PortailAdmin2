@@ -1,9 +1,9 @@
 <div class="container-fluid">
 
   <!-- start page title -->
-  <app-page-title title="Apex charts" [breadcrumbItems]="breadCrumbItems"></app-page-title>
+  <app-page-title title="Tableau de bord - Masse salariale"></app-page-title>
   <!-- end page title -->
-
+<!-- 
   <div class="row">
     <div class="col-lg-6">
       <div class="card">
@@ -18,7 +18,7 @@
           </apx-chart>
         </div>
       </div>
-      <!--end card-->
+      
     </div>
 
     <div class="col-lg-6">
@@ -33,16 +33,16 @@
             [yaxis]="dashedLineChart.yaxis" [tooltip]="dashedLineChart.tooltip"></apx-chart>
         </div>
       </div>
-      <!--end card-->
+     
     </div>
-  </div>
-  <!-- end row -->
+  </div> -->
+  
 
   <div class="row">
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title mb-4">Spline Area</h4>
+          <h4 class="card-title mb-4">Evolution masse salariale par année</h4>
           <apx-chart class="apex-charts" dir="ltr" [series]="splineAreaChart.series" [chart]="splineAreaChart.chart"
             [dataLabels]="splineAreaChart.dataLabels" [stroke]="splineAreaChart.stroke"
             [colors]="splineAreaChart.colors" [xaxis]="splineAreaChart.xaxis" [grid]="splineAreaChart.grid"
@@ -55,7 +55,7 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title mb-4">Column Charts</h4>
+          <h4 class="card-title mb-4">Masse salariale par sexe</h4>
 
           <apx-chart class="apex-charts" dir="ltr" [series]="basicColumChart.series" [chart]="basicColumChart.chart"
             [plotOptions]="basicColumChart.plotOptions" [yaxis]="basicColumChart.yaxis" [grid]="basicColumChart.grid"
@@ -74,7 +74,7 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title mb-4">Column with Data Labels</h4>
+          <h4 class="card-title mb-4">Masse salariale par mois</h4>
           <!-- Column Chart with Datalabels -->
           <apx-chart class="apex-charts" dir="ltr" [series]="columnlabelChart.series" [chart]="columnlabelChart.chart"
             [plotOptions]="columnlabelChart.plotOptions" [yaxis]="columnlabelChart.yaxis"
@@ -89,7 +89,7 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title mb-4">Bar Chart</h4>
+          <h4 class="card-title mb-4">Masse salariale par grade</h4>
           <apx-chart class="apex-charts" dir="ltr" [series]="barChart.series" [chart]="barChart.chart"
             [plotOptions]="barChart.plotOptions" [dataLabels]="barChart.dataLabels" [xaxis]="barChart.xaxis"
             [colors]="barChart.colors" [grid]="barChart.grid"></apx-chart>
@@ -100,13 +100,13 @@
   </div>
   <!-- end row -->
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body">
           <h4 class="card-title mb-4">Line, Column & Area Chart</h4>
 
-          <!-- Line, column & Area chart-->
+          
           <apx-chart class="apex-charts" dir="ltr" [series]="lineColumAreaChart.series"
             [chart]="lineColumAreaChart.chart" [tooltip]="lineColumAreaChart.tooltip" [yaxis]="lineColumAreaChart.yaxis"
             [legend]="lineColumAreaChart.legend" [plotOptions]="lineColumAreaChart.plotOptions"
@@ -116,7 +116,7 @@
           </apx-chart>
         </div>
       </div>
-      <!--end card-->
+     
     </div>
     <div class="col-lg-6">
       <div class="card">
@@ -129,10 +129,10 @@
           </apx-chart>
         </div>
       </div>
-      <!--end card-->
+     
     </div>
   </div>
-  <!-- end row -->
+  
 
   <div class="row">
     <div class="col-lg-6">
@@ -157,7 +157,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- end row -->
+  </div> -->
+  
 
-</div> <!-- container-fluid -->
+</div> 

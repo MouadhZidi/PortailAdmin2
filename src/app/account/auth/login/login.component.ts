@@ -64,7 +64,7 @@ if (data){
    Swal.fire({
   position: 'top-end',
   icon: 'success',
-  title: 'Your work has been saved',
+  title: 'Bienvenu à notre portail RH',
   showConfirmButton: false,
   timer: 3000
 });
@@ -80,7 +80,7 @@ if (data){
         });*/
       },
       (err) => {
-       this.errr="veuillez vérifier votre matricule ou mot de passe"
+       this.errr="Veuillez vérifier votre matricule ou mot de passe"
       }
     );
   }
