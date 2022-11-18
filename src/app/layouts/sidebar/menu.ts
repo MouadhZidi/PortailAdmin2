@@ -198,13 +198,13 @@ export const MENU: MenuItem[] = [
         subItems: [
             {
                 id: 37,
-                label: 'Consultation congé',
+                label: 'Solde congé',
                 link: '/conge/list',
                 parentId: 36
             },
             {
                 id: 38,
-                label: 'Solde congé',
+                label: 'Consultation congé ',
                 link: '/conge/solde',
                 parentId: 36
             },

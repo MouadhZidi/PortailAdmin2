@@ -1,41 +1,49 @@
 import { ChartType } from './dashboard.model';
 
 const emailSentBarChart: ChartType = {
-    chart: {
-        height: 340,
-        type: 'bar',
-        stacked: true,
-        toolbar: {
-            show: false
-        },
-        zoom: {
-            enabled: true
-        }
+
+
+chart: {
+    height: 350,
+    type: 'bar',
+    toolbar: {
+        show: false
+    }
+},
+plotOptions: {
+    bar: {
+        horizontal: false,
+        endingShape: 'rounded',
+        columnWidth: '45%',
     },
-    plotOptions: {
-        bar: {
-            horizontal: false,
-            columnWidth: '15%',
-            endingShape: 'rounded'
-        },
-    },
-    dataLabels: {
-        enabled: false
-    },
-    series: [{
-        name: 'Series A',
-        data: [25,25,1,163,1,134,112,50,52,51,-135,-270,29]
-    } ],
-    xaxis: {
-        categories: ['2021','2020','2019','2018','2017','2016','2015','2014','2013','2012','2011','2010','2009'],
-    },
-    colors: ['#556ee6'],
-    legend: {
-        position: 'bottom',
-    },
-    fill: {
-        opacity: 1
-    },
+},
+dataLabels: {
+    enabled: false
+},
+stroke: {
+    show: true,
+    width: 2,
+    colors: ['transparent']
+},
+colors: ['#556ee6', '#f46a6a'],
+series: [{
+    name: 'Congé pris',
+    data: [0,0,0,620,578,549,521,0,481,432,165,300,304]
+}, {
+    name: 'Solde congé',
+    data: [25,25,1,163,1,134,112,50,52,51,-135,-270,29]
+},
+
+],
+xaxis: {
+    categories: ['2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020','2021','2022'],
+},
+
+fill: {
+    opacity: 1
+},
+
+
 };
 
 const monthlyEarningChart: ChartType = {
