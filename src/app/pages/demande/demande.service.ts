@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 const AUTH_API = 'http://192.168.2.232:8080/';
-const AUTH_APII = 'http://localhost:8080/demande/downloadFile/';
+const AUTH_APII = 'http://192.168.2.232:8080/demande/downloadFile/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

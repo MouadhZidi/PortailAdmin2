@@ -35,6 +35,7 @@ const routes: Routes = [
   { path: 'conge', loadChildren: () => import('./conge/conge.module').then(m => m.CongeModule) },
   { path: 'paie', loadChildren: () => import('./paie/paie.module').then(m => m.PaieModule) },
 
+  { path: 'opposition', loadChildren: () => import('./opposition/consltoppo.module').then(m => m.ConsltoppoModule) },
 
   { path: 'bsoin', loadChildren: () => import('./bsoin/Bsoin.module').then(m => m.BsoinModule) },
 

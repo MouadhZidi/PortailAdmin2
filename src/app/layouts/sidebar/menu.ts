@@ -817,6 +817,12 @@ export const MENU: MenuItem[] = [
                     link: '/bsoin/bsoin',
                     parentId: 125
                 },
+                {
+                    id: 127,
+                    label: 'Consultation dopposition',
+                    link: '/opposition/consltoppo',
+                    parentId: 125
+                },
               
             ]
         }

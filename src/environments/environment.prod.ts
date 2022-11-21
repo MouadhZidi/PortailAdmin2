@@ -10,7 +10,7 @@ export const environment = {
     messagingSenderId: '',
     appId: '',
     measurementId: '',
-    urlServerMouadh : 'http://192.168.2.196:8080',
+    urlServerMouadh : 'http://192.168.2.96:8080',
     urlServerDhiya : 'http://192.168.2.232:8080',
   }
 };
