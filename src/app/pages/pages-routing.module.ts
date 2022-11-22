@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { GuardauthService } from '../guard/guardauth.service';
 
 import { CalendarComponent } from './calendar/calendar.component';
 import { ChatComponent } from './chat/chat.component';
 import { DefaultComponent } from './dashboards/default/default.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard' },
- 
+  { path: '', redirectTo: '/account/login',pathMatch: 'full'  },
+  { path:'account/login',redirectTo:'dashboard' },
   { path: 'dashboard', component: DefaultComponent },
   { path: 'calendar', component: CalendarComponent },
   { path: 'chat', component: ChatComponent },
-  { path: 'dashboards', loadChildren: () => import('./dashboards/dashboards.module').then(m => m.DashboardsModule) },
+  { path: 'dashboards', loadChildren: () => import('./dashboards/dashboards.module').then(m => m.DashboardsModule),canActivate:[GuardauthService] },
   { path: 'ecommerce', loadChildren: () => import('./ecommerce/ecommerce.module').then(m => m.EcommerceModule) },
   { path: 'demande', loadChildren: () => import('./demande/demande.module').then(m => m.DemandeModule) },
   { path: 'email', loadChildren: () => import('./email/email.module').then(m => m.EmailModule) },

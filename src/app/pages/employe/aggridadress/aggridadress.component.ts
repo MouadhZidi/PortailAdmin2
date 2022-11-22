@@ -34,14 +34,14 @@ export class AggridadressComponent implements OnInit {
 
 
     {
-      headerName: "Rue_A",
+      headerName: "Rue 2éme langue",
       field: "rue_a",
       editable: true,
       resizable: true,
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 300,
+      width: 450,
     },
     {
       headerName: "Rue",
@@ -51,7 +51,7 @@ export class AggridadressComponent implements OnInit {
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 330,
+      width: 450,
     },
     {
       headerName: "Gouvernorat",
@@ -91,6 +91,7 @@ export class AggridadressComponent implements OnInit {
       }
     );
   }
+
 
 
 

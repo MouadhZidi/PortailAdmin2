@@ -6,6 +6,7 @@ import { Module } from '@ag-grid-community/core';
 import { DemandeService } from '../demande.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TokenStorage } from 'src/app/core/services/token-storage.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-demande-formation',
   templateUrl: './demande-formation.component.html',
@@ -195,7 +196,13 @@ export class DemandeFormationComponent implements OnInit {
    this.demandeService.upload(formData).subscribe(
          (event: any) => {
            if (event) {
-             //this.toastr.success('Formation added!', 'Ajout effectuée avec succés.');
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'Votre demande à été bien enregistrer !',
+              showConfirmButton: false,
+              timer: 2000
+            });
              this.getListFormation()
            } else {
             // this.toastr.error('Echec ajout', 'Problème de suppression.');

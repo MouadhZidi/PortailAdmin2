@@ -5,7 +5,7 @@ import { Observable } from "rxjs";
 
 
 const API_URL = environment.urlServerMouadh;
-const api = "http://192.168.2.96:8080/consPaie/getPaie";
+const api = "http://192.168.2.232:8080/consPaie/getPaie";
 const httpOptions = {
   headers: new HttpHeaders({ "Content-Type": "application/json" }),
 };

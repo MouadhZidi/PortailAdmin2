@@ -22,7 +22,7 @@
                   </div>
                   <div class="mb-3">
                     <label for="manufacturername">Mantant</label>
-                    <input id="manufacturername" name="manufacturername" type="text" class="form-control"
+                    <input id="manufacturername" name="manufacturername" type="number" step="0.01" class="form-control"
                       formControlName="mntDem"
                      >
                     
@@ -52,12 +52,14 @@
                   </div>
                   <div class="mb-3">
                     <label class="control-label">Réponse</label>
-                    <select class="form-select" aria-label="Default select example" formControlName="reponse">
-                        <option selected>Réponse</option>
-                        <option value="O">Oui</option>
-                        <option value="N">Non</option>
 
-                      </select>
+                    <select class="form-select" aria-label="Default select example" formControlName="reponse">
+                      <option value="O">Oui</option>
+                      <option value="N">Non</option>
+                    </select>
+                    
+                    
+
                   </div>
                 </div>
               </div>

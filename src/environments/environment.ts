@@ -16,9 +16,9 @@ export const environment = {
     measurementId: '',
 
   },
-  urlServerMouadh : 'http://192.168.2.96:8080',
+  urlServerMouadh : 'http://192.168.2.232:8080',
   urlServerDhiya : 'http://192.168.2.232:8080',
-  urlServerhichem : 'http://192.168.2.95:8080',
+  urlServerhichem : 'http://192.168.2.232:8080',
 
 };
 

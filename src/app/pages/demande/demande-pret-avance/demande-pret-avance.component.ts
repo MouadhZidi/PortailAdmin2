@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { TokenStorage } from "src/app/core/services/token-storage.service";
 import { DemandeService } from "../demande.service";
 import { DropzoneConfigInterface } from "ngx-dropzone-wrapper";
+import Swal from "sweetalert2";
 @Component({
   selector: "app-demande-pret-avance",
   templateUrl: "./demande-pret-avance.component.html",
@@ -78,7 +79,13 @@ export class DemandePretAvanceComponent implements OnInit {
     console.log(this.file);
     this.service.upload(formData).subscribe((event: any) => {
       if (event) {
-        // this.toastr.success('Pret&Avance added!', 'Ajout effectuée avec succés.');
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Votre demande à été bien enregistrer !',
+          showConfirmButton: false,
+          timer: 2000
+        });
         this.getListAvance();
       } else {
         //  this.toastr.error('Echec ajout', 'Problème de suppression.');

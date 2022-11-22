@@ -25,7 +25,7 @@ export class ScolenfantComponent implements OnInit {
    
 
     {
-      headerName: "prenom",
+      headerName: "Prénom",
       field: "libprenom",
 with:200,
       filter: true,
@@ -34,7 +34,7 @@ with:200,
     {
       headerName: "Nom",
       field: "libnomjf",
-      with:200,
+      width:200,
 
       filter: true,
       floatingFilter: true,
@@ -42,7 +42,7 @@ with:200,
     {
       headerName: " Sexe ",
       field: "libsexe",
-      with:200,
+      width:200,
 
       filter: true,
       floatingFilter: true,
@@ -50,10 +50,9 @@ with:200,
     { headerName: "Date de Naissance",
       field: "libdat_naiss",
       floatingFilter: true,
-
+      width:320,
       filter: "agDateColumnFilter",
-      with:200,
-
+      
       filterParams: {
         // provide comparator function
         comparator: function (filterLocalDateAtMidnight: any, cellValue: any) {
@@ -83,12 +82,12 @@ with:200,
       editable: true,
       cellEditor: "primeCellEditor",
     }, {
-      headerName: "dat_fin_indeminité",
+      headerName: "Date fin indeminité",
 
       field: "date_ind_fin",
       filter: "agDateColumnFilter",
       floatingFilter: true,
-
+      width:330,
       filterParams: {
         // provide comparator function
         comparator: function (filterLocalDateAtMidnight: any, cellValue: any) {

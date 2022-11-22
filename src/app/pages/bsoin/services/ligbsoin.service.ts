@@ -18,20 +18,20 @@ export class LigbsoinService {
   
   fetchCession(){
 
-    return this.http.get('http://192.168.2.94:8080/api/auth/getligB/')
+    return this.http.get('http://192.168.2.232:8080/api/auth/getligB/')
   
     
    }
   
    fetchCessionBultsoin(){
 
-    return this.http.get('http://192.168.2.94:8080/api/auth/getM/')
+    return this.http.get('http://192.168.2.232:8080/api/auth/getM/')
   
     
    }
    bultSoinDet(s:any){
 
-    return this.http.post<any[]>('http://192.168.2.94:8080/api/bsoindet',s);
+    return this.http.post<any[]>('http://192.168.2.232:8080/bultSoin/bsoindet',s);
 
    }
    

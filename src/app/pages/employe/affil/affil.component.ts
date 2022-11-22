@@ -28,7 +28,7 @@ export class AffilComponent implements OnInit {
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 230,
+      width: 250,
     },
     {
       headerName: "Libellé",
@@ -41,20 +41,13 @@ export class AffilComponent implements OnInit {
       width: 250,
     },
     
-    
-   
-  
-    
-   
-
-   
 
     {
-      field: "date affiliation",
-      headerName: "dat_Affil",
+      field: "dat_Affil",
+      headerName: "Date affilation",
       filter: "agDateColumnFilter",
       resizable: true,
-      width: 200,
+      width: 250,
       sortable: true,
       floatingFilter: true,
 
@@ -89,7 +82,7 @@ export class AffilComponent implements OnInit {
     },
     {
       field: "date fin",
-      headerName: "Date Fin",
+      headerName: "Date fin",
       filter: "agDateColumnFilter",
       resizable: true,
       width: 250,
@@ -131,7 +124,7 @@ export class AffilComponent implements OnInit {
 
     
    {
-      headerName: "Numero Affilliation",
+      headerName: "Numero affilliation",
       field: "num_affil",
       editable: true,
       resizable: true,

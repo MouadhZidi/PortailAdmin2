@@ -17,7 +17,7 @@
                   </td>
                   <td>
                
-<ng-template #content let-c="close" let-d="dismiss" class="tets">
+<!-- <ng-template #content let-c="close" let-d="dismiss" class="tets">
 	<div class="modal-header">
 		<h4 class="modal-title" id="modal-basic-title"></h4>
 		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
@@ -76,9 +76,9 @@
 	<div class="modal-footer">
 		<button type="button" class="btn btn-outline-dark" (click)="c('Save click')"></button>
 	</div>
-</ng-template>
+</ng-template> -->
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Rechercher</button>
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Rechercher</button> -->
   
                   </td>
                 </tr>
@@ -86,95 +86,33 @@
 
               <hr />
 
-              <div
-              class="modal fade"
-              id="exampleModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">
-                      Consultation d'opposition
-                    </h1>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
 
-                  <div class="modal-body">
-                    <div class="form-group">
-                      <p style="">Matricule :</p>
-                      <input type="text" name="matricule" value={{list.npers}} />
-                    </div>
-                    <br />
-                    <div class="form-group">
-                      <p style="">Prêt :</p>
-                      <input type="text" name="matricule" />
-                    </div>
-                    <button
-                      type="button"
-                      class="btn btn-outline-primary btnrecherche"
-                    >
-                      Recherche
-                    </button>
-                    <br />
-
-                  
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Fermer
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
               <div class="cadre-table-scroll">
                 <table class="table table-borderless" style="width: 100%">
                   <tbody>
                     <tr>
                       <td scope="row">Matricule</td>
                       <td>
-                        <input
+                         <input
                           type="text"
                           class="form-control"
                           id="inputPassword3"
                           placeholder=""
                           style="font-size: 12px"
-                          value={{list.mat_pers}}
-                        />
+                          value= {{token.getUser().matpers}}
+                        /> 
                       </td>
-                      <td scope="row">Nom & Prénom</td>
-                      <td>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="inputPassword3"
-                          placeholder=""
-                          style="font-size: 12px"
-                          value={{list.npers}}
-                        />
-                      </td>
+
                       <td scope="row">Date d'embauche</td>
-                      <td>
-                        <input
+                      <td >
+                         <input
                           type="text"
                           class="form-control"
                           id="inputPassword3"
                           placeholder=""
                           style="font-size: 12px"
-                          value={{list.personnel[0].dat_emb}}
-                        />
+                         [value]="perso11.dat_emb"
+                        /> 
                       </td>
                     </tr>
                     <tr>
@@ -186,7 +124,7 @@
                           id="inputPassword3"
                           placeholder=""
                           style="font-size: 12px"
-                          value={{list.cod_soc}}
+                          value={{token.getUser().cod_soc}}
                         />
                       </td>
                       <td scope="row">Libellé</td>

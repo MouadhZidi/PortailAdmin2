@@ -44,8 +44,9 @@ export class BsoinComponent implements OnInit {
     this.serv.bultSoinDet(this.idbesoin).subscribe(
       data => {
         this.list =data;
-       //this.ligbult =this.list.ligBult
-        
+       this.ligbult =this.list.ligBult
+
+
        
       },
       err => {
@@ -69,5 +70,140 @@ export class BsoinComponent implements OnInit {
   
       }
 
-  
+      columnAutorisation = [
+        { headerName: "Numéro lig", 
+        field: "num_lig", 
+        editable: true,
+        floatingFilter: true,   
+           filter:true,
+    
+      },
+     
+        {
+         headerName:"Date act",
+          field: "dat_soins",
+          filter: "agDateColumnFilter",
+          sortable:true,
+          floatingFilter: true,
+          filterParams: {
+            // provide comparator function
+            comparator: function (filterLocalDateAtMidnight: any, cellValue: any) {
+              var dateAsString = cellValue;
+    
+              if (dateAsString == null) {
+                return 0;
+              }
+    
+              // In the example application, dates are stored as dd/mm/yyyy
+              // We create a Date object for comparison against the filter date
+              var dateParts = dateAsString.split("/");
+              var year = Number(dateParts[2]);
+              var month = Number(dateParts[1]) - 1;
+              var day = Number(dateParts[0]);
+              var cellDate = new Date(year, month, day);
+    
+              // Now that both parameters are Date objects, we can compare
+              if (cellDate < filterLocalDateAtMidnight) {
+                return -1;
+              } else if (cellDate > filterLocalDateAtMidnight) {
+                return 1;
+              }
+              return 0;
+            },
+          },
+          editable: true,
+          cellEditor: "primeCellEditor",
+        },
+        
+
+      {
+        headerName: "Abréviation act",
+        field: "abrv_act",
+        editable: true,
+        floatingFilter: true,
+    
+        
+      },
+    
+        {
+          headerName: "Libelle Act",
+          field: "libcact",
+          editable: true,
+          filter:true,
+          floatingFilter: true,
+    
+        },
+    
+        {
+          headerName: "Nombre vign",
+          field: "nbr_vign",
+          editable: true,
+          floatingFilter: true,
+    
+          
+        },
+    
+    
+        {
+          headerName: "Indice",
+          field: "indice",
+          editable: true,
+          floatingFilter: true,
+    
+          
+        },
+        {
+          headerName: "Libelle bultin",
+          field: "libBult",
+          editable: true,
+          floatingFilter: true,
+    
+          
+        },
+        {
+          headerName: "Totale remboursement",
+          field: "tot_remb_comp",
+         // cellRenderer: this.createHyperLink.bind(this),
+    
+          editable: true,
+          floatingFilter: true,
+    
+          
+        },
+        {
+          headerName: "Libelle org",
+          field: "liborg",
+         // cellRenderer: this.createHyperLink.bind(this),
+    
+          editable: true,
+          floatingFilter: true,
+    
+          
+        },
+        {
+          headerName: "Code etablissement",
+          field: "cod_etablis",
+         // cellRenderer: this.createHyperLink.bind(this),
+    
+          editable: true,
+          floatingFilter: true,
+    
+          
+        },
+        {
+          headerName: "Observation",
+          field: "observ",
+         // cellRenderer: this.createHyperLink.bind(this),
+    
+          editable: true,
+          floatingFilter: true,
+    
+          
+        },
+      ];
+      modules: Module[] = [ClientSideRowModelModule];
+      defaultColDef = {
+        sortable: true,
+        filter: true,
+      };
 }

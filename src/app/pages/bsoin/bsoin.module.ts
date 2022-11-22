@@ -15,6 +15,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { BsoinComponent } from './bsoin/bsoin.component';
 import { BsoinRoutingModule } from './bsoin-routing.module';
 
+import { AgGridModule } from '@ag-grid-community/angular';
 
 
 const config: DropzoneConfigInterface = {
@@ -29,6 +30,7 @@ const config: DropzoneConfigInterface = {
     BsoinComponent
   ],
   imports: [
+    AgGridModule,
     CommonModule,
     BsoinRoutingModule,
     NgbNavModule,

@@ -24,14 +24,14 @@ export class EnfantComponent implements OnInit {
   columnDefs = [
    
     {
-      headerName: "Numero Famille",
+      headerName: "Numéro famille",
       field: "num_fam",
       editable: true,
       resizable: true,
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 100,
+      width: 200,
     },
     {
       headerName: "type",
@@ -41,19 +41,19 @@ export class EnfantComponent implements OnInit {
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 100,
+      width: 200,
     },
     
     
     {
-      headerName: "Penom",
+      headerName: "Prénom",
       field: "prenom",
       editable: true,
       resizable: true,
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 100,
+      width: 200,
       
      
     },
@@ -65,7 +65,7 @@ export class EnfantComponent implements OnInit {
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 100,
+      width: 200,
       
      
     },
@@ -109,8 +109,8 @@ export class EnfantComponent implements OnInit {
       cellEditor: "primeCellEditor",
     },
     {
-      headerName: "Date_fin_fich_hand",
-      field: "date fin fiche handicap",
+      headerName: "Date fin fiche handicap",
+      field: "dat_fin_fich_hand",
       filter: "agDateColumnFilter",
       resizable: true,
       sortable: true,
@@ -186,7 +186,7 @@ export class EnfantComponent implements OnInit {
       cellEditor: "primeCellEditor",
     },
 
-    {headerName: "dat effet fiche handicap",
+    {headerName: "Dat effet fiche handicap",
       field: "Date dat_eff_fich_hand",
       filter: "agDateColumnFilter",
       resizable: true,
@@ -223,7 +223,7 @@ export class EnfantComponent implements OnInit {
       editable: true,
       cellEditor: "primeCellEditor",
     },
-    {headerName: "date dece",
+    {headerName: "Date décé",
     field: "dat_dece",
     filter: "agDateColumnFilter",
     resizable: true,
@@ -285,7 +285,7 @@ export class EnfantComponent implements OnInit {
       filter: true,
       floatingFilter: true,
       enableRowGroup: true,
-      width: 100,
+      width: 200,
       
 
      
@@ -299,20 +299,20 @@ export class EnfantComponent implements OnInit {
       filter: true,
       floatingFilter: true,
       enableRowGroup: true,
-      width: 100,
+      width: 200,
       
 
      
     },
     {
-      headerName: "cin",
+      headerName: "Cin",
       field: "cin",
       editable: true,
       resizable: true,
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 100,
+      width: 200,
     },{
       headerName: "Lieu emission cin",
       field: "lieu_cin",
@@ -332,17 +332,17 @@ export class EnfantComponent implements OnInit {
     
 
     {
-      headerName: "nom 2eme langue",
+      headerName: "Nom 2éme langue",
       field: "nom_jf_a",
       editable: true,
       resizable: true,
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 100,
+      width: 200,
     },
     {
-      headerName: "sexe",
+      headerName: "Sexe",
       field: "sexe",
       editable: true,
       resizable: true,
@@ -352,14 +352,14 @@ export class EnfantComponent implements OnInit {
       width: 100,
     },
     {
-      headerName: "Num_Fiche",
+      headerName: "Numéro fiche",
       field: "num_fich_hand",
       editable: true,
       resizable: true,
       sortable: true,
       filter: true,
       floatingFilter: true,
-      width: 100,
+      width: 200,
     },
 
   ];

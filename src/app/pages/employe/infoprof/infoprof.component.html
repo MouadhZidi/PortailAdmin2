@@ -20,7 +20,7 @@
                       <div class="card">
                         <div class="card-body">
                           <h1 class="card-title">Consultation Employee </h1> <h4 style=color:#2a3042> Matricule: {{perso11.mat_pers}}</h4>
-                          <p class="card-title-desc"> information </p>
+                          <p class="card-title-desc"> Information </p>
   
                           <form>
                             <div class="row">
@@ -128,13 +128,13 @@
                       <div class="card">
                         <div class="card-body">
                           <h1 class="card-title">Consultation Employee </h1> <h4 style=color:#2a3042> Matricule: {{perso11.mat_pers}}</h4>
-                          <p class="card-title-desc"> information </p>
+                          <p class="card-title-desc"> Information </p>
   
                           <form>
                             <div class="row">
                               <div class="col-sm-6">
                                 <div  *ngFor="let item of perso11.rens_pers"class="mb-3">
-                                  <label for="productname"> regime travail	</label>
+                                  <label for="productname"> Régime Travail	</label>
                                   <input
                                   value={{item.regime_trav}}
                                     id="productname"
@@ -144,7 +144,7 @@
                                   />
                                 </div>
                                 <div *ngFor="let item of perso11.rens_pers" class="mb-3">
-                                  <label for="manufacturername"> Debut Cycle	</label>
+                                  <label for="manufacturername"> Début Cycle	</label>
                                   <input
                                   value={{item.deb_cycle}}
                                     id="manufacturername"
@@ -173,7 +173,7 @@
                                 </div>
   
                                   <div *ngFor="let item of perso11.rens_pers" class="mb-3">
-                                    <label for="price">Regime heure
+                                    <label for="price">Regime Heure
                                     </label>
                                     <input
                                     value={{item.regime_heur}}
@@ -236,7 +236,7 @@
                                 />
                                 </div>
                                 <div *ngFor="let item of perso11.rens_pers" class="mb-3">
-                                  <label for="price">Regime
+                                  <label for="price">Régime
                                   </label>
                                   <input
                                   value={{item.lib_regime}}
@@ -246,7 +246,7 @@
                                   <div class="invalid-feedback"></div>
                                 </div>
                                 <div *ngFor="let item of perso11.rens_pers" class="mb-3">
-                                  <label for="price">Regime Conge
+                                  <label for="price">Régime Congé
                                   </label>
                                   <input
                                   value={{item.lib_regimecng}}
@@ -298,8 +298,8 @@
   
                       <div class="card">
                         <div class="card-body">
-                          <h4 class="card-title">Meta Data</h4>
-                          <p class="card-title-desc">Fill all information below</p>
+                          <h4 class="card-title">Pointage</h4>
+                          <p class="card-title-desc">Les informations ci-dessous</p>
   
                          <app-aggridadress></app-aggridadress>
                         </div>
@@ -343,7 +343,7 @@
                                 <td >{{item.lib_bul}}</td>
                                 <td *ngIf="item.cod_pay=='V'">Virement</td>
                                 <td *ngIf="item.cod_pay=='E'">Especes</td>
-                                <td *ngIf="item.cod_pay=='C'">Cheque</td>
+                                <td *ngIf="item.cod_pay=='C'">Chéque</td>
               
                                 <td>{{item.date_modp}}</td>
                                 
@@ -475,7 +475,7 @@
                                           <div class="invalid-feedback"></div>
                                         </div>
                                         <div  *ngFor="let item of rens" class="mb-3">
-                                          <label for="manufacturerbrand">Service DoMESTIQUE	</label>
+                                          <label for="manufacturerbrand">Service Domestique	</label>
                                           <input
                                             id="manufacturerbrand"
                                             value={{item.ind_domest}}
@@ -555,7 +555,7 @@
                                         />
                                       </div>
                                       <div *ngFor="let item of rens" class="mb-3">
-                                        <label for="manufacturerbrand">Libellé service DoMESTIQUE</label>
+                                        <label for="manufacturerbrand">Libellé Service Domestique</label>
                                         <input
                                           id="manufacturerbrand"
                                           value={{item.lib_dom}} 
@@ -639,7 +639,7 @@
         
                                     <div class="col-sm-6">
                                       <div *ngFor="let item of rens"  class="mb-3">
-                                        <label for="metadescription">Libelle Voiture
+                                        <label for="metadescription">Libélle Voiture
                                         </label>
                                         <input
                                         value={{item.lib_cvoit}}
@@ -720,7 +720,7 @@
                                 <div class="card">
                                   <div class="card-body">
                                     <h1 class="card-title">Consultation Employee </h1> <h4 style=color:#2a3042> Matricule: {{perso11.mat_pers}}</h4>
-                                    <p class="card-title-desc"> information </p>
+                                    <p class="card-title-desc"> Information </p>
             
                                    <app-exprienceprof></app-exprienceprof>
                                   </div>
@@ -738,7 +738,7 @@
                         <a ngbNavLink>
                           <i class="bx bx-italic
                           -check d-block check-nav-icon mt-4 mb-2"></i>
-                          <p class="fw-bold mb-4">indemnité</p>
+                          <p class="fw-bold mb-4">Indemnité</p>
                         </a>
                         <ng-template ngbNavContent>
                             <div class="container-fluid">
@@ -751,7 +751,7 @@
                                     <div class="card">
                                       <div class="card-body">
                                         <h1 class="card-title">Consultation Employee </h1> <h4 style=color:#2a3042> Matricule: {{perso11.mat_pers}}</h4>
-                                        <p class="card-title-desc"> information </p>
+                                        <p class="card-title-desc"> Information </p>
                 
                                        <app-indimnite></app-indimnite>
                                       </div>

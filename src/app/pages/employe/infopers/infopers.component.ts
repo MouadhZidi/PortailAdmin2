@@ -58,7 +58,7 @@ h:string="10908"
         this.perso11 = data; console.log('exected' + data);
        this.adrpersbycodeandmat=this.perso11.adresses_personnel
        this.rens=this.perso11.rens_pers
-        console.log("dddddddd"+this.perso.nom_pers)
+        
       },
       err => {
         console.log(err);

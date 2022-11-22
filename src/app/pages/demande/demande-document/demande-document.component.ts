@@ -6,6 +6,7 @@ import { DemandeService } from "../demande.service";
 import { saveAs } from "file-saver";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
 import { Module } from "@ag-grid-community/core";
+import Swal from "sweetalert2";
 @Component({
   selector: "app-demande-document",
   templateUrl: "./demande-document.component.html",
@@ -47,7 +48,13 @@ export class DemandeDocumentComponent implements OnInit {
     console.log(this.file);
     this.demandeService.upload(formData).subscribe((event: any) => {
       if (event) {
-        //  this.toastr.success('Document added!', 'Ajout effectuée avec succés.');
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Votre demande à été bien enregistrer !',
+          showConfirmButton: false,
+          timer: 2000
+        });
         this.getListDocument();
       } else {
         //  this.toastr.error('Echec ajout', 'Problème de suppression.');

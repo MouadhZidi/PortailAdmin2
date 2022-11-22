@@ -23,10 +23,11 @@ export class ConjointComponent implements OnInit {
       headerName: "Numero Assurance conjoint",
       field: "num_ass_conj",
       editable: true,
-
+      sortable:true,
+      resizable: true,
       filter: true,
       floatingFilter: true,
-      with:280
+      width:280
 
   
     },
@@ -34,10 +35,10 @@ export class ConjointComponent implements OnInit {
       headerName: "Numéro Famille",
       field: "num_fam",
       editable: true,
-
+      resizable: true,
       filter: true,
       floatingFilter: true,
-      with:200,
+      width:200,
 
 
     },
@@ -47,10 +48,10 @@ export class ConjointComponent implements OnInit {
       headerName: "Prénom",
       field: "prenom",
       editable: true,
-
+      resizable: true,
       filter: true,
       floatingFilter: true,
-      with:100
+      width:150
 
 
       
@@ -60,10 +61,10 @@ export class ConjointComponent implements OnInit {
     {
       headerName: "Nom",
       field: "nom_jf",
-
+      resizable: true,
       filter: true,
       floatingFilter: true,
-      with:100,
+      width:150,
 
       
       
@@ -74,8 +75,8 @@ export class ConjointComponent implements OnInit {
       headerName: "Date de Naissance",
       field: "dat_naiss",
       filter: "agDateColumnFilter",
-      with:200,
-
+      width:200,
+      resizable: true,
 
       floatingFilter: true,
 
@@ -114,8 +115,8 @@ export class ConjointComponent implements OnInit {
       field: "dat_cin",
       filter: "agDateColumnFilter",
       floatingFilter: true,
-      with:130,
-
+      width:200,
+      resizable: true,
 
       filterParams: {
         // provide comparator function
@@ -152,8 +153,8 @@ export class ConjointComponent implements OnInit {
       headerName: "Date de mariage",
       filter: "agDateColumnFilter",
       floatingFilter: true,
-      with:200,
-
+      width:200,
+      resizable: true,
 
       filterParams: {
         // provide comparator function
@@ -192,8 +193,8 @@ export class ConjointComponent implements OnInit {
       editable: true,
       filter: true,
       floatingFilter: true,
-      with:200
-
+      width:200,
+      resizable: true,
       
 
      
@@ -201,15 +202,15 @@ export class ConjointComponent implements OnInit {
     {
       headerName: "Cin",
       field: "cin",
-      with:100,
-
+      width:150,
+      resizable: true,
 
       filter: true,
       floatingFilter: true,
     },{
       headerName: "Lieu emission",
       field: "lieu_cin",
-      with:200,
+      width:200,
       filter: true,
       floatingFilter: true,
     },
@@ -229,7 +230,7 @@ export class ConjointComponent implements OnInit {
       sortable: true,
       filter: true,
       floatingFilter: true,
-      with:200
+      width:200
 
     },
 
