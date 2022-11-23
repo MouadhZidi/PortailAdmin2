@@ -37,6 +37,7 @@ import { ChatComponent } from './chat/chat.component';
 import { ApexComponent } from './chart/apex/apex.component';
 import { ConsltoppoComponent } from './opposition/consltoppo/consltoppo.component';
 import { ConsltoppoModule } from './opposition/consltoppo.module';
+
  
 
 
@@ -80,7 +81,9 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     NgbTooltipModule,
     NgbCollapseModule,
     SimplebarAngularModule,
-    LightboxModule
+    LightboxModule,
+
+    
   ],
 })
 export class PagesModule { }

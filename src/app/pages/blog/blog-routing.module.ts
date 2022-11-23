@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { BloggridComponent } from './bloggrid/bloggrid.component';
 import { BloglistComponent } from './bloglist/bloglist.component';
@@ -17,6 +18,10 @@ const routes: Routes = [
     },
     {
         path: 'detail',
+        component: DetailComponent
+    },
+    {
+        path: 'detail/:id',
         component: DetailComponent
     }
 ];

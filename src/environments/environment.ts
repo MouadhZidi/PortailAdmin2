@@ -18,7 +18,7 @@ export const environment = {
   },
   urlServerMouadh : 'http://192.168.2.232:8080',
   urlServerDhiya : 'http://192.168.2.232:8080',
-  urlServerhichem : 'http://192.168.2.232:8080',
+  urlServerhichem : 'http://192.168.2.95:8080',
 
 };
 
