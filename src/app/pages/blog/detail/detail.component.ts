@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NoteEventService } from '../note-event.service';
+import { saveAs } from "file-saver";
 
 @Component({
   selector: 'app-detail',
@@ -39,8 +40,8 @@ event:any
 
 
   }
- /*   createHyperLink(params: any): any {
-    console.log(params.data.id_libre_demande);
+    createHyperLink(params: any): any {
+    console.log(params.data.id_evenement);
 
     if (!params.data) {
       return;
@@ -50,13 +51,26 @@ event:any
     spanElement.addEventListener("click", ($event) => {
       $event.preventDefault();
       // The below code is used to navigate from one page to another page in angular. you can change it          // according to your requirement.
-      this.service
-        .download(params.data.id_libre_demande)
+      this.serv
+        .download(params.data.id_evenement)
         .subscribe((blob) => saveAs(blob, params.value));
     });
     return spanElement;
   }
-  */
-  
+
+   get homeUrl(): string {
+    return "home";
+  }
+  printerReportt(){
+    try {
+        debugger
+        this.serv.download(this.event.id_evenement)
+        .subscribe((blob) => saveAs(blob,this.event.libelle));
+      
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
 }

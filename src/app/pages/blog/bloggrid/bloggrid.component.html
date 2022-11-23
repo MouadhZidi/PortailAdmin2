@@ -2,7 +2,7 @@
     <app-page-title title="Blog Grid" [breadcrumbItems]="breadCrumbItems"></app-page-title>
 
     <div class="row">
-        <div class="col-xl-9 col-lg-8">
+        <div class="col-xl-12 col-lg-8">
             <div class="card">
                 <!-- Nav tabs -->
                 <ul ngbNav #nav="ngbNav" [activeId]="1" class="nav-tabs nav-tabs-custom justify-content-center pt-2">
@@ -28,11 +28,11 @@
                                                         <li class="nav-item">
                                                             <a class="nav-link disabled" href="javascript: void(0);" tabindex="-1" aria-disabled="true">Voir :</a>
                                                         </li>
-                                                        <li class="nav-item" data-toggle="tooltip" data-placement="top" ngbTooltip="List">
+                                                       <!--  <li class="nav-item" data-toggle="tooltip" data-placement="top" ngbTooltip="List">
                                                             <a class="nav-link" routerLink="/blog/list">
                                                                 <i class="mdi mdi-format-list-bulleted"></i>
                                                             </a>
-                                                        </li>
+                                                        </li> -->
                                                         <li class="nav-item" data-toggle="tooltip" data-placement="top" ngbTooltip="Grid">
                                                             <a class="nav-link active" routerLink="/blog/grid">
                                                                 <i class="mdi mdi-view-grid-outline"></i>
@@ -49,9 +49,22 @@
                                        
 
                                         <div class="row">
-                                            <input type="text" [(ngModel)]="term" >
+                                          <!--   <input type="text" [(ngModel)]="term" > -->
+
+
+
+                                            <div class="card-body p-4">
+                                                <div class="search-box">
+                                                    <p class="text-muted">Rechercher</p>
+                                                    <div class="position-relative">
+                                                        <input type="text" class="form-control rounded bg-light border-light"
+                                                            placeholder="Rechercher .."  [(ngModel)]="term">
+                                                        <i class="mdi mdi-magnify search-icon"></i>
+                                                    </div>
+                                                </div>
+                                                </div>
                                             
-                                            <div  *ngFor="let item of list | filter:term  |paginate: { itemsPerPage: 10, currentPage: p }; let i = index" class="col-sm-6">
+                                            <div  *ngFor="let item of list | filter:term  |paginate: { itemsPerPage: 4, currentPage: p }; let i = index" class="col-sm-6">
                                                 <div class="card p-1 border shadow-none">
                                                     <div class="p-3">
                                                         <h5><a class="text-dark">{{item.libelle}}</a></h5>
@@ -89,12 +102,16 @@
 
                                            
                                         </div>
-                                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
-
-
                                         <hr class="my-4">
-
                                         <div class="text-center">
+                                        <pagination-controls (pageChange)="p = $event"></pagination-controls></div>
+
+
+                                   <hr class="my-4">
+
+
+
+                                       <!--     <div class="text-center">
                                             <ul class="pagination justify-content-center pagination-rounded">
                                                 <li class="page-item disabled">
                                                     <a href="javascript: void(0);" class="page-link"><i class="mdi mdi-chevron-left"></i></a>
@@ -118,13 +135,16 @@
                                                     <a href="javascript: void(0);" class="page-link"><i class="mdi mdi-chevron-right"></i></a>
                                                 </li>
                                             </ul>
-                                        </div>
+
+
+                                            
+                                        </div>  -->
                                     </div>
                                 </div>
                             </div>
                         </ng-template>
                     </li>
-                    <li [ngbNavItem]="2">
+                    <!-- <li [ngbNavItem]="2">
                         <a ngbNavLink>
                             Archive
                         </a>
@@ -228,27 +248,27 @@
                                 </div>
                             </div>
                         </ng-template>
-                    </li>
+                    </li> -->
                 </ul>
                 <div [ngbNavOutlet]="nav" class="p-4"></div>
             </div>
         </div>
 
-       <div class="col-xl-3 col-lg-4">
+       <!-- <div class="col-xl-3 col-lg-4">
             <div class="card">
                 <div class="card-body p-4">
                     <div class="search-box">
-                        <p class="text-muted">Search</p>
+                        <p class="text-muted">Rechercher</p>
                         <div class="position-relative">
                             <input type="text" class="form-control rounded bg-light border-light"
-                                placeholder="Search...">
+                                placeholder="Rechercher ..">
                             <i class="mdi mdi-magnify search-icon"></i>
                         </div>
                     </div>
 
                     <hr class="my-4">
 
-                    <div>
+                  <div>
                         <p class="text-muted">Categories</p>
 
                         <ul class="list-unstyled fw-medium">
@@ -290,9 +310,9 @@
                         </ul>
                     </div>
 
-                    <hr class="my-4">
+                    <hr class="my-4"> 
 
-                    <div>
+                   <div>
                         <p class="text-muted mb-2">Popular Posts</p>
 
                         <div class="list-group list-group-flush">
@@ -356,7 +376,7 @@
                 </div>
             </div>
            
-        </div> 
+        </div>  -->
     </div>
     <!-- end row -->
 </div>

@@ -308,7 +308,7 @@ export const MENU: MenuItem[] = [
     // },
     {
         id: 52,
-        label: 'MENUITEMS.BLOG.TEXT',
+        label: 'Evenement',
         icon: 'bx-file',
         badge: {
             variant: 'success',
@@ -323,7 +323,7 @@ export const MENU: MenuItem[] = [
             // },
             {
                 id: 54,
-                label: 'MENUITEMS.BLOG.LIST.BLOGGRID',
+                label: 'Infos. Evenement',
                 link: '/blog/grid',
                 parentId: 52
             },
